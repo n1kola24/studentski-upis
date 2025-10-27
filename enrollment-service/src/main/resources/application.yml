@@ -39,7 +39,7 @@ feign:
 resilience4j:
   circuitbreaker:
     instances:
-      studentService:
+      studentServiceCB:
         register-health-indicator: true
         sliding-window-size: 5
         failure-rate-threshold: 50
@@ -48,6 +48,6 @@ resilience4j:
         automatic-transition-from-open-to-half-open-enabled: true
   retry:
     instances:
-      studentService:
+      studentServiceRetry:
         max-attempts: 3
         wait-duration: 2s

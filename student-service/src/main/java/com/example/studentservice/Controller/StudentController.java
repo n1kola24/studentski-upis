@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("api/students")
+@RequestMapping("/api/students")
 public class StudentController
 {
     private final StudentService service;
@@ -35,7 +35,7 @@ public class StudentController
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<StudentDTO> getStudentById(@PathVariable Long id)
+    public ResponseEntity<StudentDTO> getStudentById(@PathVariable("id") Long id)
     {
         StudentDTO student=service.getStudentByID(id);
         if(student!=null)
@@ -63,7 +63,7 @@ public class StudentController
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<StudentDTO> updateStudent(@PathVariable Long id, @Valid @RequestBody StudentDTO studentDTO)
+    public ResponseEntity<StudentDTO> updateStudent(@PathVariable("id") Long id, @Valid @RequestBody StudentDTO studentDTO)
     {
         StudentDTO student=service.updateStudent(id,studentDTO);
         if(student!=null)
@@ -77,7 +77,7 @@ public class StudentController
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<StudentDTO> deleteStudent(@PathVariable Long id)
+    public ResponseEntity<StudentDTO> deleteStudent(@PathVariable("id") Long id)
     {
         if(service.deleteStudent(id))
         {

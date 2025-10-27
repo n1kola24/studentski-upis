@@ -60,7 +60,7 @@ public class StudentService {
             student.setLastName(studentDTO.getLastName());
             student.setIndexNumber(studentDTO.getIndexNumber());
             student.setEmail(studentDTO.getEmail());
-            student.setPhone(student.getPhone());
+            student.setPhone(studentDTO.getPhone());
             Student student1=repository.save(student);
             return mapToDTO(student1);
         }).orElse(null);
