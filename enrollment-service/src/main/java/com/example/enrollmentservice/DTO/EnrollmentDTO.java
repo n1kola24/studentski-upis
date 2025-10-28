@@ -1,8 +1,7 @@
 package com.example.enrollmentservice.DTO;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Temporal;
-import jakarta.persistence.TemporalType;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
@@ -17,6 +16,7 @@ import java.util.Date;
 @Data
 public class EnrollmentDTO
 {
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @NotNull(message = "studentID je obavezan")
@@ -28,6 +28,8 @@ public class EnrollmentDTO
     private String semester;
 
     private String status;
+
+    @JsonFormat(pattern = "dd.MM.yyyy")
     private Date createdAt;
 
 }
