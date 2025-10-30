@@ -102,6 +102,9 @@ graph TB
   - JDBC URL: `jdbc:h2:mem:enrollmentdb`
   - Username: `sa`
   - Password: (prazno)
+### RabbitMQ (opciono)
+- URL: [http://localhost:15672](http://localhost:15672)  
+- Default kredencijali: **guest / guest**
 
 ## API Endpoints
 
