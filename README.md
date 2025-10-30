@@ -32,7 +32,7 @@ Sistem je podeljen na četiri glavna modula:
 
 ## Pokretanje 
 ### Redosled pokretanja
-**Servisi MORAJU biti pokrenuti u sledećem redosledu:**
+**Servisi MORAJU biti pokrenuti u sledećem redosledu:**<br>
 1️⃣ **Discovery-Service** 
 2️⃣ **API-Gateway**
 3️⃣ **Student-Service**  
