@@ -160,13 +160,13 @@ graph TB
 ## Kratka dokumentacija
 
 ### Obavezne funkcionalnosti
-- ✔ Dva mikroservisa (`student-service`, `enrollment-service`)  
-- ✔ Eureka server i Gateway  
-- ✔ Feign komunikacija  
-- ✔ Validacija i korektni HTTP statusi  
-- ✔ Circuit Breaker + Retry  
-- ✔ Agregacioni endpoint (`/enrollments/{id}/details`)  
-- ✔ 2–3 test klase  
+- Dva mikroservisa (`student-service`, `enrollment-service`)  
+- Eureka server i Gateway  
+- Feign komunikacija  
+- Validacija i korektni HTTP statusi  
+- Circuit Breaker + Retry  
+- Agregacioni endpoint (`/enrollments/{id}/details`)  
+- 2–3 test klase  
 
 ### Bonus funkcionalnosti
 - 🟢 **RabbitMQ** događaji (“EnrollmentCreated”)  
