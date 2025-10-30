@@ -14,7 +14,7 @@ Sistem je podeljen na četiri glavna modula:
 | **orders-service** | 8082 | /api/enrollments/* | CRUD nad `Enrollment` + Feign poziv ka `student-service` + Resilience4j fallback + RabbitMQ događaji |
 
 ---
-### 🎨 Dijagram Komponenti
+### Dijagram Komponenti
 
 ```mermaid
 graph TB
