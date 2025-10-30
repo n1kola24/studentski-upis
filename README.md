@@ -7,7 +7,7 @@ Ovaj projekat predstavlja mikroservisni sistem za urpavljanje studentima i njiho
 Sistem je podeljen na četiri glavna modula:
 
 | Modul | Port | Port | Opis |
-|--------|------|------|------|
+|-------------|------|------|------|
 | **discovery-service** | 8761 | /eureka/* | Eureka server – registracija i monitoring servisa |
 | **api-gateway** | 8080 | /api/students/* <br> /api/enrollments/* | Centralna tačka ulaza – rutiranje zahteva ka servisima, API-key autentifikacija |
 | **student-service** | 8081 | /api/students/* | CRUD nad `Student`, validacija pomoću Hibernate Validatora |
