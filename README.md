@@ -33,10 +33,10 @@ Sistem je podeljen na četiri glavna modula:
 ## Pokretanje 
 ### Redosled pokretanja
 **Servisi MORAJU biti pokrenuti u sledećem redosledu:**<br>
-1️⃣ **Discovery-Service** 
-2️⃣ **API-Gateway**
-3️⃣ **Student-Service**  
-4️⃣ **Enrollment-Service**
+1️⃣ **Discovery-Service** <br>
+2️⃣ **API-Gateway**<br>
+3️⃣ **Student-Service**  <br>
+4️⃣ **Enrollment-Service**<br>
 
 ### Eureka Dashboard
 - **URL:** http://localhost:8761
