@@ -32,18 +32,18 @@ graph TB
     
     subgraph "Business Services"
         Students[Student Service<br/>Port: 8081]
-        Enrollments[Bookings Service<br/>Port: 8082]
+        Enrollments[Enrollments Service<br/>Port: 8082]
     end
     
     subgraph "Data Layer"
-        UsersDB[(H2 Database<br/>Users)]
-        BookingsDB[(H2 Database<br/>Bookings)]
+        StudentsDB[(H2 Database<br/>Students)]
+        EnrollmentsDB[(H2 Database<br/>Enrollments)]
     end
     
     Client -->|HTTP Requests<br/>/api/students/*<br/>/api/enrollments/*| Gateway
     Gateway -->|Service Registration| Discovery
-    Gateway -->|Route /api/students/*| Users
-    Gateway -->|Route /api/enrollments/*| Bookings
+    Gateway -->|Route /api/students/*| Students
+    Gateway -->|Route /api/enrollments/*| Enrollments
     Students -->|Service Registration| Discovery
     Enrollments -->|Service Registration| Discovery
     Enrollments -->|Feign Client<br/>Get Student Details| Students
@@ -114,7 +114,7 @@ graph TB
 - `PUT /api/students/{id}` - Ažuriranje studenata
 - `DELETE /api/students/{id}` - Brisanje studenata
 
-#### Bookings Service
+#### Enrollments Service
 - `GET /api/enrollments` - Dobijanje svih studentskih upisa
 - `GET /api/enrollments/{id}` - Dobijanje studentskog upisa po ID
 - `POST /api/enrollments` - Kreiranje novog studentskog upisa
@@ -135,7 +135,7 @@ graph TB
 }
 ```
 
-### Booking Entity
+### Enrollment
 ```json
 {
   "studentID": 1,
