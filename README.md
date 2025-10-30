@@ -11,7 +11,7 @@ Sistem je podeljen na četiri glavna modula:
 | **discovery-service** | 8761 | /eureka/* | Eureka server – registracija i monitoring servisa |
 | **api-gateway** | 8080 | /api/students/* <br> /api/enrollments/* | Centralna tačka ulaza – rutiranje zahteva ka servisima, API-key autentifikacija |
 | **student-service** | 8081 | /api/students/* | CRUD nad `Student`, validacija pomoću Hibernate Validatora |
-| **orders-service** | 8082 | /api/enrollments/* | CRUD nad `Enrollment` + Feign poziv ka `student-service` + Resilience4j fallback + RabbitMQ događaji |
+| **enrollments-service** | 8082 | /api/enrollments/* | CRUD nad `Enrollment` + Feign poziv ka `student-service` + Resilience4j fallback + RabbitMQ događaji |
 
 ---
 ### Dijagram Komponenti
@@ -172,8 +172,8 @@ graph TB
 - 2–3 test klase  
 
 ### Bonus funkcionalnosti
-- 🟢 **RabbitMQ** događaji (“EnrollmentCreated”)  
-- 🟢 **API-key** autentifikacija na Gateway-u 
+- **RabbitMQ** događaji (“EnrollmentCreated”)  
+- **API-key** autentifikacija na Gateway-u 
 
 ## Autor
 **Ime i prezime:** Nikola Živadinović
